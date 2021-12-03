@@ -7,6 +7,22 @@
   pointer-events: none;
 }
 
+.rain-front {
+  width: 5px;
+  height: 30px;
+  background: grey;
+  position: absolute;
+  animation: drop infinite 4s linear;
+}
+
+.rain-back {
+  width: 5px;
+  height: 30px;
+  background: rgba(128, 128, 128, 0.459);
+  position: absolute;
+  animation: drop-back infinite 4s linear;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -26,6 +42,25 @@
 
 .App-link {
   color: #61dafb;
+}
+
+@keyframes drop {
+  from {
+    top: 0px
+  }
+  to {
+    top:100%
+  }
+}
+@keyframes drop-back {
+  from {
+    top: 0px;
+    left: 50px;
+  }
+  to {
+    top:100%;
+    left: 50px;
+  }
 }
 
 @keyframes App-logo-spin {
