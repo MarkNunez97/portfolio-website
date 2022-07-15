@@ -1,0 +1,54 @@
+.wrapper{
+    color: #00be91;
+    padding-top: 35px;
+    animation: fadein-content 4s ;
+}
+
+.back-button{
+    color: #00be91;
+}
+
+.wrapper-fade{
+    color: #00be91;
+    padding-top: 35px;
+    animation: fadeout-content 1s;
+    opacity: 0;
+}
+
+.back-button:hover{
+    cursor: pointer;
+    animation: flicker 1s infinite linear;
+}
+
+
+@keyframes fadein-content {
+    from {opacity: 0;}
+    75% { opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeout-content {
+    from {opacity: 1;}
+    75% { opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes flicker {
+    from 
+        {
+            color: #00be91;
+
+        }
+    49% 
+        {
+            color: #00be91;
+        }
+    50% 
+        {
+            color: #f2ff66;
+        }
+    to
+        { 
+            color: #f2ff66;
+        }
+}

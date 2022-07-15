@@ -1,0 +1,16 @@
+.image-wrapper{
+    text-align: center;
+}
+
+.list-container{
+    display: flex;
+}
+
+.list-container{
+    max-height: 300px;
+}
+
+
+.gif{
+    height: 450px;
+}

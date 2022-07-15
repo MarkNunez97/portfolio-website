@@ -1,0 +1,27 @@
+.image-wrapper{
+    text-align: center;
+}
+
+.gif{
+    height: 300px;
+}
+
+.job-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.job-title{
+    font-weight: bold;
+    font-size: 15px;
+    color: #38d88e
+}
+
+.job-date{
+    color: #00be91
+}
+
+.button{
+    color: #f2ff66;
+    font-size: 24px;
+}

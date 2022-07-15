@@ -1,0 +1,40 @@
+.loading-location{
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+
+.loading-container{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+
+.loading{
+    width: 0;
+    color: #9af089;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #f2ff66; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 4s steps(12, end),
+      blink-caret .5s step-end infinite;
+}
+  
+  /* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    25% {width: 100%}
+    75% {width: 100%}
+    to { width: 0}
+
+}
+
+  /* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #f2ff66 }
+}
