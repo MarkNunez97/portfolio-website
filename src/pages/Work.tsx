@@ -47,15 +47,58 @@ const job_2 = {
                                 </>
                 }
 
+const job_3 = {
+  'title': 'Freelance',
+  'date': '01/2018 - 05/2019',
+  'image': base,
+  'summary': <>
+              Created a Device that can recognize objects or people by taking a couple of pictures
+              Used a Google Dev Board to load in program, analog buttons for input, LED screen for display, and a 3D printed harness to hold components
+            </>,
+  'description': <>
+                    Researched Machine Learning and Tensorflow to to create a Machine Learning Model that identify objects 
+                    after taking pictures of an object. interfaced with multiple peripherals such as an LED display, camera, 
+                    and buttons to take in user input and display a GUI and program running. 
+                  </>
+  }
 
-const jobs = [job_1, job_2]
+
+const jobs = [job_1, job_2, job_3]
 
 function Work(props: Props) {
   const [pointer, setPointer] = useState(0)
+
+  function next(){
+    let temp = pointer
+
+    temp += 1
+    
+    const jobLength = jobs.length
+
+    const mod = temp % jobLength
+
+    setPointer(mod)
+  }
+
+  function previous(){
+    let temp = pointer
+
+    temp -= 1
+
+    if (temp < 0){
+      temp = jobs.length -1
+    }
+    
+    const jobLength = jobs.length
+
+    const mod = temp % jobLength
+
+    setPointer(mod)
+  }
   
   return (
         <>        
-            <Page onFadeIn={props.onFadeIn} onFadeOut={props.onFadeOut} title="Work" content={<JobDisplay job={jobs[pointer]}/>}/>
+            <Page onFadeIn={props.onFadeIn} onFadeOut={props.onFadeOut} title="Work" content={<JobDisplay job={jobs[pointer]} previous={()=>previous()} next={()=>next()}/>}/>
         </>
   );
 }

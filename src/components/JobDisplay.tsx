@@ -4,6 +4,8 @@ import './css/JobDisplay.css';
 
 interface Props{
     job: Job
+    previous: ()=> void;
+    next: ()=> void;
 }
 
 
@@ -12,12 +14,14 @@ function jobDisplay(props: Props) {
     <div style={{display: 'grid', alignItems: 'center'}}>
         <div style={{width: '100%'}}>
         <div className='job-header'> 
-            <p className='job-title'>
-                <span className='button'>{"< "} </span>{props.job.title}					
-            </p>
-            <p className='job-date'>
-                {props.job.date}<span className='button'>{" >"}</span>
-            </p>
+            <div className='job-title'>
+                <span className='button' onClick={()=> props.previous()}>{"< "}</span>
+                <p className='job-text-left'>{props.job.title}</p>
+            </div>
+            <div className='job-date'>
+                <p className='job-text-right'>{props.job.date}</p>
+                <span className='button' onClick={()=> props.next()}>{" >"}</span>
+            </div>
         </div>
         <div className='image-wrapper'>
             <img className='gif' src={props.job.image}/>  
