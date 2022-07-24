@@ -1,9 +1,9 @@
-.card{
+.card {
     background-color: #009a98;
     color:#9af089;
 }
 
-.hello{
+.hello {
     color: #38d88e;
     position: absolute;
     top: 50%;
@@ -13,7 +13,7 @@
     opacity: 0;
 }
 
-.menu-Item{
+.menu-Item {
     color: #f2ff66;
     position: absolute;
     top: 50%;
@@ -22,16 +22,27 @@
     text-align: center;
 }
 
-.enter{
-    animation: blinking 3s infinite;
-    animation-delay: 5s;
+.hide {
     opacity: 0;
+    cursor: default;
 }
 
+.enter{
+    animation: fade-in 2s,  blinking 3s 2s infinite;
+    opacity: 0;
+}
 
 .enter-activate{
     animation: fade-out 3s;
     opacity: 0;
+}
+
+.enter:hover{
+    cursor: pointer;
+}
+
+.enter-acivate:hover{
+    cursor: pointer;
 }
 
 .copyright{

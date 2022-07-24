@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import colorToGrey from '../common/colorToGrey.gif'
-import greyToColor from '../common/greyToColor.gif'
-import base from '../common/base.png'
+import React, { useEffect, useRef, useState } from 'react';
+import fetusLoop from '../common/fetusLoop.gif'
+import grownLoop from '../common/grownLoop.gif'
 import './css/Experience.css';
 import Page from '../components/Page';
 
@@ -12,12 +11,37 @@ interface Props{
 
 
 function Experience(props: Props) {
-  const [image, setImage] = useState(base)
+  const imgList = [ fetusLoop, grownLoop]
+  const [count, setCount] = useState(0)
+  const [index, setIndex] = useState(0)
+  const [image, setImage] = useState(imgList[index])
+  const timerRef = useRef<NodeJS.Timeout>()
+
+  // 5 second timer
+  useEffect(() => {
+    timerRef.current =  setInterval(() => setCount(prev => prev + 1), 1000);
+  }, []);
+
+  // activate key pressed
+  useEffect(() => {
+    if (count % 3 === 0){
+      if (timerRef.current){
+        const temp = 1 + index
+        const imgLength = imgList.length
+        const mod = temp % imgLength
+        
+        setImage(imgList[mod])
+        setIndex(mod)
+      }
+    }
+  }, [count]);
+
+  
   const experience = (
     <div style={{display: 'grid', alignItems: 'center', paddingTop: 55, gridAutoFlow: 'column'}}>
       <div style={{width: '100%'}}>
         <div className='image-wrapper'>
-          <img className='gif' src={image} alt={"Me, Mochi (pug), and Bean (cat)"} onMouseOver={()=> setImage(greyToColor)} onMouseOut={()=> setImage(colorToGrey)}/>  
+          <img className='gif' src={image} alt={"Me, Mochi (pug), and Bean (cat)"}/>  
         </div>
       </div>
       <div style={{flexGrow: 1, lineHeight: 2, fontSize:12}}>

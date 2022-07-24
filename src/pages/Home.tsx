@@ -27,7 +27,7 @@ function Home(props: Props) {
 
   // activate key pressed
   useEffect(() => {
-    if (count === 5){
+    if (count === 4){
       if (timerRef.current){
         clearInterval(timerRef.current)
         setKeysActivated(true)
@@ -89,7 +89,7 @@ function Home(props: Props) {
             <Intro fade={enterPressed}/>
             
             <div className='menu-Item'>
-              <h1 className={enterPressed ? "enter-activate": "enter"} onClick={()=> setEnterPressed(true)}>
+              <h1 className={keysActivated ? (enterPressed ? "enter-activate": "enter") : ("hide")} onClick={()=> setEnterPressed(true)}>
                 Press Enter
               </h1>
               <h1 className={enterPressed ? "copyright-activate": "copyright"}>

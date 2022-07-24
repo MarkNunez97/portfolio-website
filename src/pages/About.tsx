@@ -18,7 +18,7 @@ function About(props: Props) {
     <div style={{display: 'flex', alignItems: 'center', paddingTop: 55}}>
       <div style={{width: '100%'}}>
         <div className='image-wrapper'>
-          <img className='gif' src={image} alt={"Me, Mochi (pug), and Bean (cat)"} onMouseOver={()=> setImage(greyToColor)} onMouseOut={()=> setImage(colorToGrey)}/>  
+          <img className='gif' src={image} alt={"Me, Mochi (pug), and Bean (cat)"} onMouseOver={()=> setImage(greyToColor)}/>  
         </div>
       </div>
       <div style={{flexGrow: 1, lineHeight: 2, fontSize:12}}>
