@@ -1,0 +1,98 @@
+.child-contact{
+    position: relative;
+    height: 90vh;
+}
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.top {
+    position: relative;
+    min-height: 25%;
+    width: 100%;
+    text-align: center;
+}
+
+.img-container{
+    height: 100%;
+}
+
+.img{
+    max-width: 100%;
+    height: 200px;
+}
+
+.title-logo{
+    position: absolute;
+    color: #38d88e;
+    font-size: 60px;
+    text-shadow: 3px 3px 0 #00be91, 6px 6px 0 #009a98;
+    margin: 0;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 140px;
+    animation: title-bounce 1s infinite;
+}
+
+
+.input-container{
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.text-input{
+    padding: 20px;
+}
+.text-input > input{
+    background : transparent; 
+    border: 1px solid #9af089;
+    color: #009a98;
+    width: -webkit-fill-available;
+    font-size: 24px;
+    font-family: 'PF Tempesta Seven';
+    margin-bottom: 24px;
+}
+
+.title-input{
+    font-weight: bold;
+    font-size: 15px;
+    color: #f2ff66;
+    margin: 0;
+}
+
+
+.msg-input{
+    height: 100%;
+    padding: 20px;
+}
+
+.msg-input > textarea{
+    background : transparent; 
+    border: 1px solid #9af089;
+    color: #009a98;
+    width: -webkit-fill-available;
+    font-family: 'PF Tempesta Seven';
+    resize: none;
+}
+
+
+.socials-container{
+    height: 15%;
+    padding-bottom: 32px;
+}
+
+.social-img{
+    height: 74px;
+    width: 100%;
+}
+
+.social-img:hover{
+    cursor: pointer;
+}

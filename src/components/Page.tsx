@@ -10,6 +10,7 @@ interface Props{
   onFadeOut: () => void;
   onFadeIn: () => void;
   title: string;
+  hideTitle?: boolean
   content: JSX.Element;
 }
 
@@ -92,7 +93,12 @@ function Page(props: Props) {
         <>
           <Map position={props.title.toLowerCase()} moveTo={redirect? "/menu": ""}/>
           <BackButton redirect={()=>changePage("/menu")} fade={redirect}/>    
-          <Title text={props.title} fade={redirect}/>
+          { props.hideTitle ? 
+            undefined
+            :
+            <Title text={props.title} fade={redirect}/>
+          }
+          
           <Content children={props.content} fade={redirect}/>
           {showloading? <LoadingText/> : null}
         </>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Job } from '../definitions/Job';
 import './css/JobDisplay.css';
 
@@ -10,21 +10,36 @@ interface Props{
 
 
 function JobDisplay(props: Props) {
+    const [disabled, setDisabled] = useState(false)
+    const [currentJob, setCurrentJob] = useState(props.job)
     const [currentImg, setCurrentImg] = useState(props.job.image_start)
+    
+    
+    useEffect(() => {
+        if(props.job.title !== currentJob.title){
+            setCurrentJob(props.job)
+            setDisabled(false)
+        }
+        
+    }, [props]);
     
     useEffect(() => {
         setCurrentImg(props.job.image_start)
-    }, [props]);
-
+    }, [currentJob]);
+    
     function prevClicked(){
-        setCurrentImg(props.job.image_end)
-        props.previous()
-        
+        if(!disabled){
+            setDisabled(true)
+            props.previous()
+        }
     }
     
     function nextClicked(){
-        setCurrentImg(props.job.image_end)
-        props.next()  
+        if(!disabled){
+            setDisabled(true)
+            props.next()  
+        }
+        
     }
 
     return (

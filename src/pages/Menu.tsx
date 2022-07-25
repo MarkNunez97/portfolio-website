@@ -4,6 +4,7 @@ import LoadingText from '../components/LoadingText';
 import Logo from '../components/Logo';
 import Options from '../components/Options';
 import Map from '../components/Map';
+import image from "./../common/MarkNunez.png";
 
 interface Props{
   onFadeOut: () => void;
@@ -93,7 +94,7 @@ function Menu(props: Props) {
   return (
         <>        
             <Map position={'menu'} moveTo={redirectLocation}/>
-            <Logo fade={redirect}/>
+            <Logo fade={redirect} image={image} title="Mark Nunez"/>
             <Options fade={redirect} redirect={(location) => changePage(location)}/>
             {showloading? <LoadingText/> : null}
         </>
