@@ -13,7 +13,6 @@ import About from './pages/About';
 import Experience from './pages/Experience';
 import Work from './pages/Work';
 import Contact from './pages/Contact';
-import Resume from './pages/Resume';
 
 function App() {
   const [fade, setFade] = useState<fadeType>("Fade In");
@@ -33,7 +32,6 @@ function App() {
         <Route path="/experience" element={<Base content={<Experience onFadeOut={fadeOutRain} onFadeIn={fadeInRain}/>} fade={fade} />} />
         <Route path="/work" element={<Base content={<Work onFadeOut={fadeOutRain} onFadeIn={fadeInRain}/>} fade={fade} />} />
         <Route path="/contact" element={<Base content={<Contact onFadeOut={fadeOutRain} onFadeIn={fadeInRain}/>} fade={fade} />} />
-        <Route path="/resume" element={<Base content={<Resume onFadeOut={fadeOutRain} onFadeIn={fadeInRain}/>} fade={fade} />} />
 
       </Routes>
     </BrowserRouter>
