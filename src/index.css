@@ -1,5 +1,3 @@
-@import url('http://fonts.cdnfonts.com/css/pf-tempesta-seven');
-
 
 * {
   overflow: hidden;
@@ -8,8 +6,6 @@
 html, #root{
   height: 100%;
   margin: 0;
-  /* Copyright 2014-present Evernote Corporation. All rights reserved. */
-
 }
 
 
