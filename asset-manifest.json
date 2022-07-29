@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.6d888306.chunk.css",
+    "main.css": "/static/css/main.907fd5e3.chunk.css",
     "main.js": "/static/js/main.1aa084f3.chunk.js",
     "main.js.map": "/static/js/main.1aa084f3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a86c4b36.js",
@@ -10,7 +10,7 @@
     "static/js/3.2ac0676b.chunk.js": "/static/js/3.2ac0676b.chunk.js",
     "static/js/3.2ac0676b.chunk.js.map": "/static/js/3.2ac0676b.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.6d888306.chunk.css.map": "/static/css/main.6d888306.chunk.css.map",
+    "static/css/main.907fd5e3.chunk.css.map": "/static/css/main.907fd5e3.chunk.css.map",
     "static/js/2.6e586825.chunk.js.LICENSE.txt": "/static/js/2.6e586825.chunk.js.LICENSE.txt",
     "static/media/MarkNunez.f2899679.png": "/static/media/MarkNunez.f2899679.png",
     "static/media/Resume2021.a6c93ccc.pdf": "/static/media/Resume2021.a6c93ccc.pdf",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.a86c4b36.js",
     "static/js/2.6e586825.chunk.js",
-    "static/css/main.6d888306.chunk.css",
+    "static/css/main.907fd5e3.chunk.css",
     "static/js/main.1aa084f3.chunk.js"
   ]
 }
