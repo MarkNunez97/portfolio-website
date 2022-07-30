@@ -14,7 +14,7 @@ function Logo(props: Props) {
                 <img className="picture" src={props.image} alt={"Hello"}/>
             </div>
             <div className={props.fade ? "name-logo-fade": "name-logo-container"}>
-                <h1 className="name-logo">{props.title}</h1>
+                <div className="name-logo">{props.title}</div>
             </div>
         </div>
   );

@@ -12,6 +12,8 @@
 
 .name-logo-container{
     height: 25%;
+    width: 100%;
+    text-align: center;
 }
 
 .picture{
@@ -23,10 +25,11 @@
 
 .name-logo{
     color: #38d88e;
-    font-size: 60px;
+    font-size: 6vh;
     text-shadow: 3px 3px 0 #00be91, 6px 6px 0 #009a98;
-    margin-top: 0px;
+    margin: 0px;
     animation: title-bounce 1s infinite;
+    height: 100%;
 }
 
 
@@ -54,9 +57,18 @@
 }
 
 @keyframes title-bounce {
-    from {padding: 0px;}
-    50% {padding: 5px;}
-    to {padding: 0px;}
+    from {
+            padding-top: 0px;
+            padding-bottom: 0px;
+         }
+    50% {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    to {
+        padding-top: 0px;
+        padding-bottom: 0px;
+       }
 }
 
 @keyframes logo-bounce {
