@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "PF Tempesta Seven";
+  src: local("PF Tempesta Seven"),
+    url("./fonts/PF-Tempesta-Seven/pf_tempesta_seven.ttf") format("truetype");
+  }
+
+
+* {
+  overflow: hidden;
+}
+
+html, #root{
+  height: 100%;
+  margin: 0;
+}
+
+
+body {
+  font-family: 'PF Tempesta Seven', sans-serif;
+  height: 100vh;
+  margin: 0;
+  background: #121212;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
