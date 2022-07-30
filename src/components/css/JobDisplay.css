@@ -29,6 +29,12 @@
     font-weight: bold;
 }
 
+.disabled-button{
+    color: #f2ff667d;
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .job-text-left {
     padding-left: 10px;
     margin-top: 8px;

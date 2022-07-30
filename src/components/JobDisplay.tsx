@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Job } from '../definitions/Job';
 import './css/JobDisplay.css';
 
@@ -6,6 +6,8 @@ interface Props{
     job: Job
     previous: ()=> void;
     next: ()=> void;
+    length: number
+    index: number
 }
 
 
@@ -47,16 +49,25 @@ function JobDisplay(props: Props) {
             <div style={{width: '100%'}}>
             <div className='job-header'> 
                 <div className='job-title'>
-                    <span className='button' onClick={()=> prevClicked()}>{"< "}</span>
+                    {props.index === 0 ?
+                        (<span className='disabled-button'>{"< "}</span>)
+                        : 
+                        (<span className='button' onClick={()=> prevClicked()}>{"< "}</span>)
+                    }
                     <p className='job-text-left'>{props.job.title}</p>
                 </div>
                 <div className='job-date'>
                     <p className='job-text-right'>{props.job.date}</p>
-                    <span className='button' onClick={()=> nextClicked()}>{" >"}</span>
+                    {props.index === props.length - 1 ?
+                        (<span className='disabled-button'>{" >"}</span>)
+                        : 
+                        (<span className='button' onClick={()=> nextClicked()}>{" >"}</span>)
+                    }
+                    
                 </div>
             </div>
             <div className='image-wrapper'>
-                <img className='gif' src={currentImg}/>  
+                <img className='gif' src={currentImg} alt="very cool gif"/>  
             </div>
             </div>
             <div style={{flexGrow: 1, lineHeight: 2, fontSize:12}}>

@@ -105,7 +105,19 @@ function Work(props: Props) {
   
   return (
         <>        
-            <Page onFadeIn={props.onFadeIn} onFadeOut={props.onFadeOut} title="Work" content={<JobDisplay job={job} previous={()=>previous()} next={()=>next()}/>}/>
+            <Page 
+              onFadeIn={props.onFadeIn} 
+              onFadeOut={props.onFadeOut} 
+              title="Work" 
+              content={<JobDisplay 
+                          job={job} 
+                          previous={()=>previous()} 
+                          next={()=>next()}
+                          length={jobs.length}
+                          index={pointer}
+                          />
+                      }
+            />
         </>
   );
 }
