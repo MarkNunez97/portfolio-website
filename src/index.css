@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "PF Tempesta Seven";
+  src: local("PF Tempesta Seven"),
+    url("./fonts/PF-Tempesta-Seven/pf_tempesta_seven.ttf") format("truetype");
+  }
+
 
 * {
   overflow: hidden;

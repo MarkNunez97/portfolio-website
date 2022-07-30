@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './fonts/PF-Tempesta-Seven/pf_tempesta_seven.ttf'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
