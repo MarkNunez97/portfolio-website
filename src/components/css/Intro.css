@@ -3,6 +3,8 @@
 .title{
     color: #00be91;
     animation: fadein-content 4s;
+    margin-top: 0px;
+    font-size: 3vw;
 }
 
 .name{
