@@ -1,11 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import mogi from '../common/mogi.gif'
-import base from '../common/linkedIn/linkedIn-base.png'
-import hover from '../common/linkedIn.gif'
-import out from '../common/linkedIn-reverse.gif'
 import './css/Contact.css';
 import Page from '../components/Page';
 import emailjs from '@emailjs/browser';
+import Socials from '../components/Socials';
 
 interface Props{
   onFadeOut: () => void;
@@ -14,12 +12,7 @@ interface Props{
 
 
 function Contact(props: Props) {
-  const [image, setImage] = useState(base)
   const form = useRef<HTMLFormElement>(null)
-
-  const handleClick = () => {
-    window.open("https://www.linkedin.com/in/mark-nunez-a7114b164/");
-  };
 
   const sendEmail = (e: any) => {
     e.preventDefault();
@@ -61,9 +54,7 @@ function Contact(props: Props) {
               </div>
               <input type="submit" className={"email-button"} value="SEND"/>
          </form>
-         <div className={"socials-container"}>
-              <img className="social-img" src={image} onClick={handleClick} onMouseOver={()=>setImage(hover)} onMouseOut={()=>setImage(out)}/>
-          </div>
+         <Socials/>
         
       </div>
     </div>

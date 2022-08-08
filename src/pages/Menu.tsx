@@ -5,6 +5,8 @@ import Logo from '../components/Logo';
 import Options from '../components/Options';
 import Map from '../components/Map';
 import image from "./../common/MarkNunez.png";
+import Socials from '../components/Socials';
+import './css/Menu.css';
 
 interface Props{
   onFadeOut: () => void;
@@ -77,7 +79,6 @@ function Menu(props: Props) {
         setShowLoading(false)
         navigate(redirectLocation, { replace: true });
       }
-      
     }
     
   }, [loadCount, redirectLocation, navigate]);
@@ -95,7 +96,10 @@ function Menu(props: Props) {
         <>        
             <Map position={'menu'} moveTo={redirectLocation}/>
             <Logo fade={redirect} image={image} title="Mark Nunez"/>
-            <Options fade={redirect} redirect={(location) => changePage(location)}/>
+            <div className='bottom-container'>
+              <Options fade={redirect} redirect={(location) => changePage(location)}/>\
+              <Socials/>
+            </div>
             {showloading? <LoadingText/> : null}
         </>
   );

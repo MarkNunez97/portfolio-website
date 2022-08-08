@@ -103,16 +103,3 @@
 .email-button:active{
     transform: translateY(4px);
 }
-
-.socials-container{
-    height: 15%;
-}
-
-.social-img{
-    height: 74px;
-    width: 100%;
-}
-
-.social-img:hover{
-    cursor: pointer;
-}

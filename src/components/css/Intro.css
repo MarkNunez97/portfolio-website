@@ -1,20 +1,74 @@
 
 /* Fade in */
+@media only screen and (max-width: 1100px){
+    .title{
+        font-size: 2vh!important;
+    }
+    .name{
+        font-size: 3vh!important;
+    }
+    .job{
+        font-size: 4vh!important;
+    }
+    .dev{
+        font-size: 5vh!important;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .title{
+        font-size: 1.5vh!important;
+    }
+    .name{
+        font-size: 2vh!important;
+    }
+    .job{
+        font-size: 2.5vh!important;
+    }
+    .dev{
+        font-size: 3vh!important;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .title{
+        font-size: 1vh!important;
+    }
+    .name{
+        font-size: 1.25vh!important;
+    }
+    .job{
+        font-size: 1.5vh!important;
+    }
+    .dev{
+        font-size: 2vh!important;
+    }
+}
+
 .title{
     color: #00be91;
     animation: fadein-content 4s;
     margin-top: 0px;
-    font-size: 3vw;
+    font-size: 3vh
 }
 
 .name{
     color: #38d88e;
-    animation: fadein-content 4.1s;
+    animation: fadein-content 4.2s;
+    font-size: 4vh
 }
 
 .job{
     color: #9af089;
-    animation: fadein-content 4.2s;
+    animation: fadein-content 4.4s;
+    font-size: 5vh
+}
+
+.dev{
+    color: #f2ff66;
+    animation: fadein-content 4.5s,  rainbow 1s infinite;
+    font-size: 6vh;
+    white-space: nowrap;
 }
 
 /* Fade out */
@@ -36,6 +90,12 @@
     opacity: 0;
 }
 
+.dev-fade{
+    color: #f2ff66;
+    animation: fadeout-content 1s;
+    opacity: 0;
+}
+
 
 @keyframes fadein-content {
     from {opacity: 0;}
@@ -47,4 +107,15 @@
     from {opacity: 1;}
     75% { opacity: 1;}
     to {opacity: 0;}
+}
+
+@keyframes rainbow {
+    from { color: #f2ff66;}
+    15%  { color: #9af089;}
+    30%  { color: #38d88e;}
+    45%  { color: #00be91;}
+    60%  { color: #009a98;}
+    75%  { color: #00be91;}
+    90%  { color: #38d88e;}
+    to   { color: #9af089; }
 }
