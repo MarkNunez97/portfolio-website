@@ -1,0 +1,11 @@
+.hello {
+    font-size: calc(3vw + 3vh);
+    color: #38d88e;
+    animation: fadein-out 3s;
+    opacity: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

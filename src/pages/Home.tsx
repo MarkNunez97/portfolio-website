@@ -3,6 +3,8 @@ import { Navigate } from 'react-router-dom';
 import LoadingText from '../components/LoadingText';
 import './css/Home.css';
 import Intro from '../components/Intro';
+import Enter from '../components/Enter';
+import Hello from '../components/Hello';
 
 interface Props{
   onFadeOut: () => void;
@@ -82,20 +84,14 @@ function Home(props: Props) {
   return (
         <>
             {/* need to pass boolean to check to show or not */}
-            
-            <h1 className='hello'>
-                Hello
-            </h1>      
-            <Intro fade={enterPressed}/>
-            
-            <div className='menu-Item'>
-              <h1 className={keysActivated ? (enterPressed ? "enter-activate": "enter") : ("hide")} onClick={()=> setEnterPressed(true)}>
-                Press Enter
-              </h1>
-              <h1 className={enterPressed ? "copyright-activate": "copyright"}>
-                © 1997, El Paso TX
-              </h1>
+            <div className={enterPressed? 'home-top fade': 'home-top'}>
+              <Hello/>     
+              <Intro/>
             </div>
+            <div className='home-bottom'>
+              <Enter keysActivated={keysActivated} enterPressed={enterPressed} onClick={()=> setEnterPressed(true)} />
+            </div>
+            
             {showloading? <LoadingText/> : null}
             {redirect? <Navigate to="/menu" replace={true} /> : null}
             
